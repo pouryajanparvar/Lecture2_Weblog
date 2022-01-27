@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}register{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <center><h1>register page</h1></center>
+    <hr>
+    <center>
+        <div style="background-color: black; height: 440px;
+     border: 4px outset black; color: white; width: 400px;">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div style="padding: 5px; padding-top: 40px;">{{form.as_p}}</div>
+                <center><input type="submit" value="sign up" class="btn btn-success"></center>
+            </form>
+        </div>
+    </center>
+
+</div>
+
+
+{% endblock %}

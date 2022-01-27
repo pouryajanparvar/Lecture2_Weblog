@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}login{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <center><h1>login page</h1></center>
+    <hr>
+    <center>
+        <div style="background-color: black; height: 350px;
+     border: 4px outset black; color: white; width: 400px;">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div style="padding: 5px; padding-top: 40px;">{{form.as_p}}</div>
+                <center>
+                    <input type="submit" value="signin" class="btn btn-success">
+                    <a href="{% url 'account:register' %}" class="btn btn-primary">signup</a>
+                </center>
+            </form>
+        </div>
+    </center>
+
+</div>
+
+
+{% endblock %}
